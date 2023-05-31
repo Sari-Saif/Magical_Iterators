@@ -18,12 +18,12 @@ namespace ariel
     {
     private:
         int *elements;
-        int size;
+        int _size;
         int capacity;
 
     public:
         // Constructor
-        MagicalContainer() : elements(nullptr), size(0), capacity(0) {}
+        MagicalContainer() : elements(nullptr), _size(0), capacity(0) {}
         // Destructor
         ~MagicalContainer()
         {
@@ -85,10 +85,82 @@ namespace ariel
         // }
 
         // Get the size of the container
-        int getSize() const;
+        int size() const;
         //{
         // return size;
         //}
+        class SideCrossIterator
+        {
+        public:
+            SideCrossIterator(MagicalContainer &);
+            SideCrossIterator begin();
+            SideCrossIterator end();
+            int *operator*() const;
+            //   { return *m_ptr; }
+            //  operator->();
+            //   { return m_ptr; }
+            SideCrossIterator &operator++();
+            // {
+            // };
+            SideCrossIterator operator++(int);
+            // {
+            //     // AscendingIterator tmp = *this;
+            //     // ++(*this);
+            //     // return tmp;
+            // }
+            friend bool operator==(const SideCrossIterator &a, const SideCrossIterator &b);
+            // { return a.m_ptr == b.m_ptr; };
+            friend bool operator!=(const SideCrossIterator &a, const SideCrossIterator &b);
+        };
+        class PrimeIterator
+        {
+
+        public:
+            PrimeIterator(MagicalContainer &);
+            PrimeIterator begin();
+            PrimeIterator end();
+            int *operator*() const;
+            //  { return *m_ptr; }
+            // operator->();
+            //  { return m_ptr; }
+            PrimeIterator &operator++();
+            // {
+            // };
+            PrimeIterator operator++(int);
+            // {
+            //     // AscendingIterator tmp = *this;
+            //     // ++(*this);
+            //     // return tmp;
+            // }
+            friend bool operator==(const PrimeIterator &a, const PrimeIterator &b);
+            // { return a.m_ptr == b.m_ptr; };
+            friend bool operator!=(const PrimeIterator &a, const PrimeIterator &b);
+        };
+        class AscendingIterator
+        {
+
+        public:
+            AscendingIterator(MagicalContainer &);
+            AscendingIterator begin();
+            AscendingIterator end();
+            int *operator*() const;
+            //   { return *m_ptr; }
+            //  operator->();
+            //   { return m_ptr; }
+            AscendingIterator &operator++();
+            // {
+            // };
+            AscendingIterator operator++(int);
+            // {
+            //     // AscendingIterator tmp = *this;
+            //     // ++(*this);
+            //     // return tmp;
+            // }
+            friend bool operator==(const AscendingIterator &a, const AscendingIterator &b);
+            // { return a.m_ptr == b.m_ptr; };
+            friend bool operator!=(const AscendingIterator &a, const AscendingIterator &b);
+            //  { return a.m_ptr != b.m_ptr; };
+        };
     };
 };
 #endif // MAGICALCONTAINER_HPP
