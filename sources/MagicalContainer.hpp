@@ -95,7 +95,7 @@ namespace ariel
             SideCrossIterator(MagicalContainer &);
             SideCrossIterator begin();
             SideCrossIterator end();
-            int *operator*() const;
+            int operator*() const;
             //   { return *m_ptr; }
             //  operator->();
             //   { return m_ptr; }
@@ -119,7 +119,7 @@ namespace ariel
             PrimeIterator(MagicalContainer &);
             PrimeIterator begin();
             PrimeIterator end();
-            int *operator*() const;
+            int operator*() const;
             //  { return *m_ptr; }
             // operator->();
             //  { return m_ptr; }
@@ -143,7 +143,7 @@ namespace ariel
             AscendingIterator(MagicalContainer &);
             AscendingIterator begin();
             AscendingIterator end();
-            int *operator*() const;
+            int operator*() const;
             //   { return *m_ptr; }
             //  operator->();
             //   { return m_ptr; }
