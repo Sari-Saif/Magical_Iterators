@@ -16,16 +16,16 @@
 
 namespace ariel
 {
-    class MagicalContainer
+    class MagicalContainer //NOLINT
     {
     private:
         // data members
         int _size;
-        int _primeS; // prime size
-        ADTNode *_Head;
-        ADTNode *_Tail;
-        ADTNode *_primeH;
-        ADTNode *_primeT;
+        int _primeS;      // prime size
+        ADTNode *_Head;   // NOLINT
+        ADTNode *_Tail;   // NOLINT
+        ADTNode *_primeH; // NOLINT
+        ADTNode *_primeT; // NOLINT
 
     public:
         // Constructor
@@ -39,7 +39,7 @@ namespace ariel
         // Get the size of the container
         int size() const;
 
-        class SideCrossIterator
+        class SideCrossIterator // NOLINT
         {
         private:
             MagicalContainer &magic;
@@ -63,7 +63,7 @@ namespace ariel
             bool operator>(const SideCrossIterator &seconed) const;
             bool operator<(const SideCrossIterator &seconed) const;
         };
-        class AscendingIterator
+        class AscendingIterator // NOLINT
         {
         private:
             MagicalContainer &magic;
@@ -87,7 +87,7 @@ namespace ariel
             bool operator>(const AscendingIterator &seconed) const;
             bool operator<(const AscendingIterator &seconed) const;
         };
-        class PrimeIterator
+        class PrimeIterator // NOLINT
         {
         private:
             MagicalContainer &magic;
