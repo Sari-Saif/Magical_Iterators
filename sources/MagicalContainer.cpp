@@ -9,10 +9,10 @@ MagicalContainer::MagicalContainer() : _Head(nullptr), _Tail(nullptr), _primeT(n
 
 MagicalContainer::~MagicalContainer()
 {
-    for (int i = _size; i > 0; --i)
-    {
-        removeElement(_Head->node_Value());
-    }
+    // for (int i = _size; i > 0; --i)
+    // {
+    //     removeElement(_Head->node_Value());
+    // }
 }
 void MagicalContainer::removeElement(int data) {}
 void MagicalContainer::addElement(int data) {}

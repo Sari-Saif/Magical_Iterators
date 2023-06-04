@@ -2,21 +2,21 @@
 
 using namespace ariel;
 
-ADTNode::ADTNode(int data) : _Next(nullptr), _Back(nullptr), _prime_Next(nullptr), _prime_Back(nullptr)
+ADTNode::ADTNode(int data) : Next(nullptr), Back(nullptr), prime_Next(nullptr), prime_Back(nullptr)
 {
 
     this->_data = data;
 }
 
-ADTNode *ADTNode::getNext() { return this->_Next; }
-ADTNode *ADTNode::get_PrimeNext() { return this->_prime_Next; }
-ADTNode *ADTNode::getBack() { return this->_Back; }
-ADTNode *ADTNode::get_PrimeBack() { return this->_prime_Back; }
+ADTNode *ADTNode::getNext() { return this->Next; }
+ADTNode *ADTNode::get_PrimeNext() { return this->prime_Next; }
+ADTNode *ADTNode::getBack() { return this->Back; }
+ADTNode *ADTNode::get_PrimeBack() { return this->prime_Back; }
 
-void ADTNode::setNext(ADTNode *update) { _Next = update; }
-void ADTNode::set_PrimeNext(ADTNode *update) { _prime_Next = update; }
-void ADTNode::setBack(ADTNode *update) { _prime_Back = update; }
-void ADTNode::set_PrimeBack(ADTNode *update) { _Back = update; }
+void ADTNode::setNext(ADTNode *update) { Next = update; }
+void ADTNode::set_PrimeNext(ADTNode *update) { prime_Next = update; }
+void ADTNode::setBack(ADTNode *update) { prime_Back = update; }
+void ADTNode::set_PrimeBack(ADTNode *update) { Back = update; }
 
 int ADTNode::node_Value()
 {

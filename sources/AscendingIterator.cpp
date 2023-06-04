@@ -4,7 +4,7 @@ using namespace ariel;
 MagicalContainer::AscendingIterator::AscendingIterator(MagicalContainer &iter) : magic(iter)
 {
     this->start = iter._Head;
-    this->_range = iter.size();
+    this->_range = 0;
 }
 MagicalContainer::AscendingIterator::AscendingIterator(AscendingIterator &iter) : magic(iter.magic)
 {

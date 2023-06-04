@@ -11,10 +11,10 @@ namespace ariel
     {
     private:
         int _data;
-        ADTNode *_Next;
-        ADTNode *_Back;
-        ADTNode *_prime_Next;
-        ADTNode *_prime_Back;
+        ADTNode *Next;
+        ADTNode *Back;
+        ADTNode *prime_Next;
+        ADTNode *prime_Back;
 
     public:
         // ctor
