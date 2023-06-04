@@ -30,7 +30,7 @@ namespace ariel
         void set_PrimeBack(ADTNode *);
         int node_Value();
         // used for tracking(debuging) and print elements
-        friend ostream &operator<<(ostream &os, const ADTNode &);
+        friend ostream &operator<<(ostream &input, const ADTNode &);
     };
 
 };

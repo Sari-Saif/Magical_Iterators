@@ -23,8 +23,8 @@ int ADTNode::node_Value()
     return this->_data;
 }
 
-ostream &ariel::operator<<(ostream &os, const ADTNode &target)
+ostream &ariel::operator<<(ostream &input, const ADTNode &target)
 {
-    os << target._data << std::endl;
-    return os;
+    input << target._data << std::endl;
+    return input;
 }
