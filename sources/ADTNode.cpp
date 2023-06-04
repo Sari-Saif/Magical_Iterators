@@ -26,4 +26,5 @@ int ADTNode::node_Value()
 ostream &ariel::operator<<(ostream &os, const ADTNode &target)
 {
     os << target._data << std::endl;
+    return os;
 }

@@ -9,12 +9,15 @@ TEST_CASE("adding")
 {
     MagicalContainer container;
     CHECK(container.size() == 0);
+
     container.addElement(0);
     container.addElement(2);
     container.addElement(30);
     container.addElement(5);
     container.addElement(789);
     CHECK(container.size() == 5);
+    container.removeElement(5);
+    CHECK(container.size() == 4);
 }
 
 TEST_CASE("Removing elements from container")
@@ -28,6 +31,8 @@ TEST_CASE("Removing elements from container")
         CHECK_NOTHROW(container.removeElement(1));
         CHECK_THROWS(container.removeElement(1)); // isnot exist
         CHECK(container.size() == 1);
+        CHECK_NOTHROW(container.removeElement(2));
+        CHECK(container.size() == 0);
     }
 }
 
@@ -61,13 +66,15 @@ TEST_CASE("primeIterator")
     container.addElement(2);
     container.addElement(3);
     container.addElement(4);
+    container.addElement(13);
 
     MagicalContainer::PrimeIterator it(container);
     CHECK(*it == 2);
     ++it;
     CHECK(*it == 3);
     ++it;
-
+    CHECK(it != it.end());
+    ++it;
     CHECK(it == it.end());
 }
 
@@ -101,6 +108,11 @@ TEST_CASE("sideCrossiterator case")
     {
         MagicalContainer emptyContainer;
         MagicalContainer::SideCrossIterator it(emptyContainer);
+
+        CHECK(it == it.end());
+        emptyContainer.addElement(13);
+        CHECK(it != it.end());
+        emptyContainer.removeElement(13);
         CHECK(it == it.end());
     }
 }
@@ -151,7 +163,6 @@ TEST_CASE("Multiple Iterators Test")
         CHECK(*it2 == 71);
     }
 }
-
 
 TEST_CASE("primeIterator with non prime")
 {

@@ -4,6 +4,8 @@
  * URL TUTORIAL:
  * https://en.cppreference.com/w/
  * https://hackingcpp.com/cpp/cheat_sheets.html
+ * Credit to & owner of the idea to ADTNODE DESIGNER :
+ * Simcha Teich
  */
 
 #ifndef MAGICALCONTAINER_HPP
@@ -31,19 +33,25 @@ namespace ariel
         // Destructor
         ~MagicalContainer();
         // Add an element to the container
-        void addElement(int element);
+        void addElement(int);
         // Remove an element from the container
-        void removeElement(int element);
+        void removeElement(int);
         // Get the size of the container
         int size() const;
 
         class SideCrossIterator
         {
+        private:
+            MagicalContainer &magic;
+            ADTNode *start;
+            int _range;
+
         public:
             // ctor's
             SideCrossIterator(MagicalContainer &);
             SideCrossIterator(SideCrossIterator &);
             ~SideCrossIterator();
+            SideCrossIterator &operator=(const SideCrossIterator &);
             // the head annd the tail
             SideCrossIterator begin();
             SideCrossIterator end();
@@ -57,12 +65,17 @@ namespace ariel
         };
         class AscendingIterator
         {
+        private:
+            MagicalContainer &magic;
+            ADTNode *start;
+            int _range;
 
         public:
             // ctor's
             AscendingIterator(MagicalContainer &);
             AscendingIterator(AscendingIterator &);
             ~AscendingIterator();
+            AscendingIterator &operator=(const AscendingIterator &);
             // the head annd the tail
             AscendingIterator begin();
             AscendingIterator end();
@@ -76,11 +89,17 @@ namespace ariel
         };
         class PrimeIterator
         {
+        private:
+            MagicalContainer &magic;
+            ADTNode *start;
+            int _range;
+
         public:
             // ctor's
             PrimeIterator(MagicalContainer &);
             PrimeIterator(PrimeIterator &);
             ~PrimeIterator();
+            PrimeIterator &operator=(const PrimeIterator &);
             // the head annd the tail
             PrimeIterator begin();
             PrimeIterator end();
