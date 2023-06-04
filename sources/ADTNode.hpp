@@ -24,13 +24,13 @@ namespace ariel
         ADTNode *get_PrimeNext();
         ADTNode *getBack();
         ADTNode *get_PrimeBack();
-        void *setNext(ADTNode *);
-        void *set_PrimeNext(ADTNode *);
-        void *setBack(ADTNode *);
-        void *set_PrimeBack(ADTNode *);
+        void setNext(ADTNode *);
+        void set_PrimeNext(ADTNode *);
+        void setBack(ADTNode *);
+        void set_PrimeBack(ADTNode *);
         int node_Value();
         // used for tracking(debuging) and print elements
-        friend ostream &operator<<(ostream &os, const ADTNode &node); // NOLINT
+        friend ostream &operator<<(ostream &os, const ADTNode &);
     };
 
 };
