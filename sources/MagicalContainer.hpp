@@ -5,7 +5,7 @@
  * https://en.cppreference.com/w/
  * https://hackingcpp.com/cpp/cheat_sheets.html
  * Credit to & owner of the idea to ADTNODE DESIGNER :
- * Simcha Teich
+ * Simcha Teich - https://drive.google.com/file/d/15o9KRTFxoOuS7r0CEkHNmYOPaDulfMAo/view?usp=sharing
  */
 
 #ifndef MAGICALCONTAINER_HPP
